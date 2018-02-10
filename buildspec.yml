@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - npm install -g yarn
+  build:
+    commands:
+    - yarn install --production
+    - yarn release
+  post_build:
+    commands:
+      - aws s3 sync dist s3://$APP_BUCKET
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: dist
