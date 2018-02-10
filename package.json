@@ -4,5 +4,15 @@
   "main": "index.js",
   "repository": "git@github.com:jncornett/do-app.git",
   "author": "Joel Cornett <joecorne@amazon.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "release": "webpack --env.production",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.1"
+  }
 }
