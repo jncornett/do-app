@@ -1,0 +1,8 @@
+{
+  "name": "do-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jncornett/do-app.git",
+  "author": "Joel Cornett <joecorne@amazon.com>",
+  "license": "MIT"
+}
