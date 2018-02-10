@@ -10,7 +10,7 @@ phases:
     - yarn release
   post_build:
     commands:
-      - aws s3 sync dist s3://$APP_BUCKET
+    - yarn deploy
 
 artifacts:
   files:

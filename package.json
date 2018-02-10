@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "release": "webpack --env.production",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "deploy": "bash ./bin/deploy-to-s3"
   },
   "dependencies": {
     "autoprefixer": "^7.2.6",

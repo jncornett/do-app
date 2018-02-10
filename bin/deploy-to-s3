@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -x
+
+if [[ -z "$APP_BUCKET" ]]; then
+    echo "no APP_BUCKET environment variable defined" >&2
+    exit 1
+fi
+
+PROFILE_ARG=""
+if [[ -n "$PROFILE" ]]; then
+  PROFILE_ARG="--profile=$PROFILE"
+fi
+
+aws s3 sync dist $PROFILE_ARG "s3://${APP_BUCKET}"
